@@ -295,9 +295,7 @@
         وأنا محظوظة إن جزء كبير منها بقى معايا.
       </p>
 
-      <a href="#letter" class="button">
-        Open your surprise
-      </a>
+<button class="btn" onclick="openSurprise()">Open your surprise</button>
 
     </div>
 
@@ -708,7 +706,18 @@
   <footer>
     Made with love · Nora × Zozo ❤️
   </footer>
+<audio id="birthdaySong" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+function openSurprise() {
+  document.getElementById("birthdaySong").play();
+  document.getElementById("letter").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
 </body>
 </html>
 ```
