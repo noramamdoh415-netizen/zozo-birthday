@@ -1,0 +1,714 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy 23rd, Zozo ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: #f7f1ea;
+      color: #4b2728;
+      line-height: 1.9;
+    }
+
+    section {
+      padding: 85px 8%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background:
+        radial-gradient(circle at top left, #ead8c9, transparent 35%),
+        radial-gradient(circle at bottom right, #d9c8b7, transparent 30%),
+        #f7f1ea;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .small-title {
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #8a6260;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(55px, 10vw, 105px);
+      line-height: 1.08;
+      margin-bottom: 25px;
+      color: #612f31;
+      direction: ltr;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #765756;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 30px;
+      border: 1px solid #612f31;
+      border-radius: 50px;
+      color: #612f31;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .button:hover {
+      background: #612f31;
+      color: white;
+    }
+
+    /* TITLES */
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      color: #612f31;
+      margin-bottom: 8px;
+      direction: ltr;
+    }
+
+    .section-title p {
+      color: #8a6966;
+    }
+
+    /* LETTER */
+    .letter {
+      background: #fffaf5;
+      border-radius: 28px;
+      padding: 45px;
+      box-shadow: 0 15px 50px rgba(90, 50, 40, .08);
+    }
+
+    .letter p {
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #612f31;
+      font-weight: 600;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .timeline-item {
+      background: #fffaf5;
+      padding: 25px 30px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      border-right: 4px solid #9b6961;
+    }
+
+    .date {
+      color: #9b6961;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 5px;
+      color: #612f31;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .photo {
+      height: 280px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #dfd0c2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #765756;
+      text-align: center;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 23 THINGS */
+    .things {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .thing {
+      background: #fffaf5;
+      padding: 20px;
+      border-radius: 18px;
+    }
+
+    .number {
+      color: #9b6961;
+      font-weight: 700;
+      margin-left: 8px;
+    }
+
+    /* MUSIC */
+    .music {
+      text-align: center;
+      background: #eadbd0;
+      border-radius: 30px;
+      padding: 50px 25px;
+    }
+
+    .music h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #612f31;
+      direction: ltr;
+    }
+
+    audio {
+      margin-top: 25px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    /* ENDING */
+    .ending {
+      text-align: center;
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ending h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(45px, 8vw, 80px);
+      color: #612f31;
+      margin-bottom: 25px;
+      direction: ltr;
+    }
+
+    .ending p {
+      max-width: 680px;
+      margin: auto;
+      font-size: 18px;
+      color: #765756;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #9b8580;
+      font-size: 13px;
+      direction: ltr;
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 65px 6%;
+      }
+
+      .letter {
+        padding: 28px;
+      }
+
+      .gallery,
+      .things {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        height: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        TO MY FAVORITE PERSON
+      </div>
+
+      <h1>
+        Happy 23rd,<br>
+        Zozo ❤️
+      </h1>
+
+      <p>
+        سنة جديدة من عمرك بدأت...<br>
+        وأنا محظوظة إن جزء كبير منها بقى معايا.
+      </p>
+
+      <a href="#letter" class="button">
+        Open your surprise
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- LETTER -->
+  <section id="letter">
+
+    <div class="section-title">
+      <h2>A Little Letter For You</h2>
+      <p>حاجة صغيرة من قلبي ❤️</p>
+    </div>
+
+    <div class="letter">
+
+      <p>
+        زوزو،
+      </p>
+
+      <p>
+        مش عارفة أبدأ منين، بس يمكن أحسن بداية هي إني أقولك
+        إن وجودك في حياتي بقى من الحاجات اللي مبقتش أتخيل حياتي من غيرها.
+      </p>
+
+      <p>
+        من يوم 31/7، من تاني مرة شوفتك فيها،
+        لحد كل اللحظات اللي جمعتنا بعدها،
+        كل حاجة فيهم بقت ذكرى ليها مكان خاص عندي.
+      </p>
+
+      <p>
+        وأكتر حاجة بحبها فيك إنك شخص مسؤول،
+        وبتخاف على اللي حواليك، وقلبك أبيض جدًا،
+        وبتحب تساعد أي حد حتى من غير ما تستنى حاجة في المقابل.
+      </p>
+
+      <p>
+        وبحب فيك إنك مهما الدنيا ضغطت عليك،
+        مش بتعرف تستسلم.
+        ممكن تتعب، ممكن تقع، بس في الآخر بتقوم وتحاول تاني.
+        ودي واحدة من أكتر الحاجات اللي بفتخر بيك عشانها.
+      </p>
+
+      <p>
+        وأكتر من أي حاجة...
+        بحب إحساسي وأنا معاك.
+        بحب إني ببقى مبسوطة، مرتاحة،
+        وبضحك من قلبي من غير ما أفكر في حاجة.
+      </p>
+
+      <p>
+        أتمنى سنتك الـ23 تكون مليانة حاجات حلوة،
+        وتحقق فيها كل حاجة نفسك فيها،
+        وتكون بداية لسنين أحلى بكتير.
+      </p>
+
+      <p>
+        وكل سنة وإنت الشخص اللي بحبه،
+        وصاحبي، وخطيبي،
+        وMy favorite person ❤️
+      </p>
+
+      <div class="signature">
+        بحبك ❤️<br>
+        نورا
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- OUR STORY -->
+  <section>
+
+    <div class="section-title">
+      <h2>Our Story</h2>
+      <p>لحظات صغيرة... بس عمرها ما كانت صغيرة بالنسبالي</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="date">31 / 7</div>
+
+        <h3>تاني مرة شوفتك</h3>
+
+        <p>
+          يوم يمكن وقتها مكنتش عارفة إنه هيبقى
+          بداية لكل الذكريات اللي بعد كده.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="date">Our First Date</div>
+
+        <h3>أركان · الشيخ زايد</h3>
+
+        <p>
+          اليوم اللي كنت فيه كيوت وحنين جدًا،
+          وكنت بتحاول تعمل أي حاجة أنا عايزاها.
+          كنت مبسوطة معاك أوي اليوم ده.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="date">By The Sea · دمياط الجديدة</div>
+
+        <h3>أول I love you في وشي</h3>
+
+        <p>
+          واحدة من اللحظات اللي مستحيل أنساها.
+          كنت مبسوطة بشكل مش طبيعي،
+          ولسه فاكرة إحساسي وقتها لحد دلوقتي ❤️
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="date">25 / 8</div>
+
+        <h3>Another Year Of Us</h3>
+
+        <p>
+          سنة جديدة من حكايتنا،
+          ولسه قدامنا حاجات كتير أوي نعيشها سوا.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MEMORIES -->
+  <section>
+
+    <div class="section-title">
+
+      <h2>Our Memories</h2>
+
+      <p>
+        صور كتير لذكريات أكتر ❤️
+      </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+      <!-- غيري أسماء الصور حسب صورك -->
+
+      <div class="photo">
+        <img src="photo1.jpg" alt="Our Memory">
+      </div>
+
+      <div class="photo">
+        <img src="photo2.jpg" alt="Our Memory">
+      </div>
+
+      <div class="photo">
+        <img src="photo3.jpg" alt="Our Memory">
+      </div>
+
+      <div class="photo">
+        <img src="photo4.jpg" alt="Our Memory">
+      </div>
+
+      <div class="photo">
+        <img src="photo5.jpg" alt="Our Memory">
+      </div>
+
+      <div class="photo">
+        <img src="photo6.jpg" alt="Our Memory">
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- 23 THINGS -->
+  <section>
+
+    <div class="section-title">
+
+      <h2>23 Things I Love About You</h2>
+
+      <p>
+        عشان بقيت 23... لازم يكون عندي 23 سبب ❤️
+      </p>
+
+    </div>
+
+
+    <div class="things">
+
+      <div class="thing">
+        <span class="number">01</span>
+        قلبك الأبيض
+      </div>
+
+      <div class="thing">
+        <span class="number">02</span>
+        إنك شخص مسؤول
+      </div>
+
+      <div class="thing">
+        <span class="number">03</span>
+        اهتمامك باللي بتحبهم
+      </div>
+
+      <div class="thing">
+        <span class="number">04</span>
+        إنك بتحب تساعد الناس
+      </div>
+
+      <div class="thing">
+        <span class="number">05</span>
+        إنك مش بتستسلم بسهولة
+      </div>
+
+      <div class="thing">
+        <span class="number">06</span>
+        إنك دايمًا بتحاول تاني
+      </div>
+
+      <div class="thing">
+        <span class="number">07</span>
+        طريقتك في الاهتمام بيا
+      </div>
+
+      <div class="thing">
+        <span class="number">08</span>
+        ضحكتك
+      </div>
+
+      <div class="thing">
+        <span class="number">09</span>
+        هزارك
+      </div>
+
+      <div class="thing">
+        <span class="number">10</span>
+        وجودك وقت ما بحتاجك
+      </div>
+
+      <div class="thing">
+        <span class="number">11</span>
+        إنك بتخليني أضحك
+      </div>
+
+      <div class="thing">
+        <span class="number">12</span>
+        طيبة قلبك
+      </div>
+
+      <div class="thing">
+        <span class="number">13</span>
+        طموحك
+      </div>
+
+      <div class="thing">
+        <span class="number">14</span>
+        اهتمامك بالتفاصيل
+      </div>
+
+      <div class="thing">
+        <span class="number">15</span>
+        إنك بتسمعني
+      </div>
+
+      <div class="thing">
+        <span class="number">16</span>
+        إنك بتعرف تطمنّي
+      </div>
+
+      <div class="thing">
+        <span class="number">17</span>
+        إنك على طبيعتك معايا
+      </div>
+
+      <div class="thing">
+        <span class="number">18</span>
+        كل خروجة معاك
+      </div>
+
+      <div class="thing">
+        <span class="number">19</span>
+        كل ذكرى بينا
+      </div>
+
+      <div class="thing">
+        <span class="number">20</span>
+        إنك بتخليني أحس إني مهمة
+      </div>
+
+      <div class="thing">
+        <span class="number">21</span>
+        إنك زوزو ❤️
+      </div>
+
+      <div class="thing">
+        <span class="number">22</span>
+        كل حاجة لسه هنعيشها سوا
+      </div>
+
+      <div class="thing">
+        <span class="number">23</span>
+        ببساطة... إنت.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MUSIC -->
+  <section>
+
+    <div class="music">
+
+      <h3>One Song, One Memory</h3>
+
+      <p>
+        الأغنية اللي بحبها أكتر لما أكون معاك
+      </p>
+
+      <p>
+        كده وإنت معايا — وائل جسار
+      </p>
+
+      <!-- حطي الأغنية في نفس فولدر الموقع باسم song.mp3 -->
+
+      <audio controls>
+
+        <source src="song.mp3" type="audio/mpeg">
+
+        المتصفح لا يدعم تشغيل الأغنية.
+
+      </audio>
+
+    </div>
+
+  </section>
+
+
+  <!-- ENDING -->
+  <section class="ending">
+
+    <div>
+
+      <h2>Happy Birthday, Zozo ❤️</h2>
+
+      <p>
+        كل سنة وإنت طيب يا زوزو،
+        وكل سنة وإنت أقرب وأحب شخص لقلبي.
+      </p>
+
+      <br>
+
+      <p>
+        أتمنى الـ23 تكون سنة مختلفة وحلوة عليك،
+        تحقق فيها حاجات كتير نفسك فيها،
+        وتفضل دايمًا الشخص اللي مهما الدنيا وقفت قدامه
+        يقوم ويحاول تاني.
+      </p>
+
+      <br>
+
+      <p>
+        وأنا أتمنى أفضل جنبك في كل السنين الجاية،
+        في كل لحظة حلوة، وكل تحدي،
+        وكل حاجة جديدة هنعيشها سوا.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>
+          بحبك أكتر مما الكلام يقدر يوصف،
+          and I'm so happy I get to call you mine. ❤️
+        </strong>
+      </p>
+
+      <br>
+
+      <a href="#letter" class="button">
+        Read it again ♡
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    Made with love · Nora × Zozo ❤️
+  </footer>
+
+</body>
+</html>
+```
