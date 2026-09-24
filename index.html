@@ -295,7 +295,7 @@
         وأنا محظوظة إن جزء كبير منها بقى معايا.
       </p>
 
-<button class="btn" onclick="openSurprise()">Open your surprise</button>
+<a href="#letter" class="button" onclick="playBirthdaySong()">Open your surprise</a>
 
     </div>
 
@@ -711,11 +711,8 @@
 </audio>
 
 <script>
-function openSurprise() {
+function playBirthdaySong() {
   document.getElementById("birthdaySong").play();
-  document.getElementById("letter").scrollIntoView({
-    behavior: "smooth"
-  });
 }
 </script>
 </body>
